@@ -33,7 +33,7 @@ public class ChessView {
     }
 
     public void printBoard(ArrayList<Piece> pieceList) {
-
+        System.out.print("\n   A   B   C  D   E   F  G   H");
         for(int i=0; i < 8; i++) {
             System.out.print("\n" + (8-i) + " ");
 
@@ -52,10 +52,12 @@ public class ChessView {
                 }
             }
             System.out.print(getBGReset());
+            System.out.print(" " + (8-i) + " ");
         }
 
         // print the bottom Letters
         System.out.print("\n   A   B   C  D   E   F  G   H");
+        System.out.print("\n");
     }
 
     /**
