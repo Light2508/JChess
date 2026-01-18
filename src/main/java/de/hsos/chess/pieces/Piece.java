@@ -1,14 +1,18 @@
 package de.hsos.chess.pieces;
 
-import de.hsos.chess.Position;
-
 public abstract class Piece {
-    Position position;
-    char color;
+    private final char name;
+    protected Position position;
+    private char color;
 
-    public Piece(int x, int y, char color) {
+    public Piece(int x, int y, char color, char name) {
+        this.name = name;
         this.position = new Position(x,y);
         setColor(color);
+    }
+
+    public char getName() {
+        return this.name;
     }
 
     public int getColor() {
@@ -23,7 +27,15 @@ public abstract class Piece {
         }
     }
 
+    public int getPosX() {
+        return this.position.getX();
+    }
+
+    public int getPosY() {
+        return this.position.getY();
+    }
 
     public abstract void move(int x, int y);
     public abstract boolean isMoveValid(int x, int y);
+    public abstract String toString();
 }
