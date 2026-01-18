@@ -1,4 +1,4 @@
-package de.hsos.chess;
+package de.hsos.chess.pieces;
 
 public class Position {
     private int x = 0;
