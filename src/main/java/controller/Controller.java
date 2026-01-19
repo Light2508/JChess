@@ -13,6 +13,7 @@ public class Controller {
         ChessView view = new ChessView();
         view.printBoard(pieceList);
 
+
     }
 
     /**

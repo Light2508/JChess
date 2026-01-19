@@ -68,17 +68,17 @@ public class ChessView {
      */
     String alternateBG(int x, int y) {
         String whitebg = "\u001B[47m";
-        String greenbg = "\u001B[40m";
+        String blackbg = "\u001B[40m";
 
         if(y % 2 == 0) {
             if(x % 2 == 0) {
                 return whitebg;
             } else {
-                return greenbg;
+                return blackbg;
             }
         } else {
             if(x % 2 == 0) {
-                return greenbg;
+                return blackbg;
             } else {
                 return whitebg;
             }
